@@ -1,11 +1,12 @@
 import React from 'react'
 import NavBar from '../../components/NavBar'
+import ValueToPay from '../../components/ValueToPay'
 
 export default function Confirmation() {
   return (
     <div>
       <NavBar />
-      <h1> Minha primeira pagina de confirmação!!</h1>
+      <ValueToPay />
     </div>
   )
 }

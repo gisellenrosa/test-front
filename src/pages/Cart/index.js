@@ -4,6 +4,7 @@ import {
   Body,
   Product,
   ProductsBox,
+  Content,
   Title,
   Img,
   ProductDescription,
@@ -23,38 +24,38 @@ export default function Cart() {
   return (
     <Body>
       <NavBar />
-      <div>
+      <Content>
         <div>
           <Title>PRODUTOS</Title>
+          <ProductsBox>
+            {items.map((item) => {
+              return (
+                <Product>
+                  <Img
+                    src={item.product.imageObjects[0].extraLarge}
+                    alt={"Foto máscara de reconstrução L'Oréal"}
+                  />
+                  <ProductDescription>
+                    <ProductText> {item.product.name} </ProductText>
+                    <ProductValue>
+                      {' '}
+                      R${' '}
+                      {item.product.priceSpecification.price &&
+                        item.product.priceSpecification.price.toFixed(2)}{' '}
+                    </ProductValue>
+                  </ProductDescription>
+                </Product>
+              )
+            })}
+          </ProductsBox>
         </div>
-        <ProductsBox>
-          {items.map((item) => {
-            return (
-              <Product>
-                <Img
-                  src={item.product.imageObjects[0].extraLarge}
-                  alt={"Foto máscara de reconstrução L'Oréal"}
-                />
-                <ProductDescription>
-                  <ProductText> {item.product.name} </ProductText>
-                  <ProductValue>
-                    {' '}
-                    R${' '}
-                    {item.product.priceSpecification.price &&
-                      item.product.priceSpecification.price.toFixed(2)}{' '}
-                  </ProductValue>
-                </ProductDescription>
-              </Product>
-            )
-          })}
-        </ProductsBox>
-      </div>
-      <div>
-        <ValueToPay />
-      </div>
-      <LinkButton to="/payment">
-        <Button> SEGUIR PARA PAGAMENTO</Button>
-      </LinkButton>
+        <div>
+          <ValueToPay />
+          <LinkButton to="/payment">
+            <Button> SEGUIR PARA PAGAMENTO</Button>
+          </LinkButton>
+        </div>
+      </Content>
     </Body>
   )
 }

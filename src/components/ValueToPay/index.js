@@ -32,16 +32,14 @@ export default function ValueToPay() {
         <Value>
           {' '}
           <ValueText> FRETE </ValueText>{' '}
-          <ValueText>R$ {count.shippingTotal && count.shippingTotal.toFixed(2)}</ValueText>{' '}
+          <ValueText>R$ {count.shippingTotal && count.shippingTotal.toFixed(2)}</ValueText>
         </Value>
         <Value>
-          {' '}
-          <ValueDiscount> DESCONTO </ValueDiscount>{' '}
-          <ValueDiscount> R$ {count.discount && count.discount.toFixed(2)} </ValueDiscount>{' '}
+          <ValueDiscount> DESCONTO </ValueDiscount>
+          <ValueDiscount> - R$ {count.discount && count.discount.toFixed(2)} </ValueDiscount>
         </Value>
         <Value>
-          {' '}
-          <ValueTotal>TOTAL </ValueTotal> <ValueTotal> R$ {calc && calc.toFixed(2)} </ValueTotal>{' '}
+          <ValueTotal>TOTAL </ValueTotal> <ValueTotal> R$ {calc && calc.toFixed(2)} </ValueTotal>
         </Value>
       </ValuesBox>
     </div>

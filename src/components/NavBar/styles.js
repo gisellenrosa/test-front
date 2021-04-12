@@ -3,6 +3,9 @@ import { NavLink } from 'react-router-dom'
 
 export const Body = styled.div`
   background-color: #eeeeee;
+  @media (min-width: 1024px) {
+    margin-bottom: 50px;
+  }
 `
 
 export const StyledLink = styled(NavLink)`
@@ -48,4 +51,14 @@ export const MenuLinks = styled.li`
   font-weight: bold;
   font-size: 0.9em;
   list-style: none;
+  margin-left: 8px;
+  @media (min-width: 768px) {
+    margin-left: 60px;
+  }
+  @media (min-width: 1024px) {
+    margin-left: 100px;
+  }
+  @media (min-width: 1445px) {
+    margin-left: 200px;
+  }
 `

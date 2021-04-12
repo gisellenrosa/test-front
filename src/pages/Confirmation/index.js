@@ -4,9 +4,13 @@ import {
   Body,
   ImgConfirmation,
   ImgContent,
+  Content,
   CustomerBox,
   CustomerInfo,
   InfoText,
+  ContentProduct,
+  ContentValue,
+  ProductandValue,
   Product,
   ContentBox,
   Title,
@@ -26,42 +30,44 @@ export default function Confirmation() {
   return (
     <Body>
       <NavBar />
-      <div>
+      <Content>
         <ImgContent>
           <ImgConfirmation src={BuyConfirmation} />
         </ImgContent>
         <div>
           <Title>PAGAMENTO</Title>
+          <CustomerBox>
+            <CustomerInfo>
+              <InfoText>****.****.****.1234</InfoText>
+              <InfoText>GISELLE N ROSA</InfoText>
+              <InfoText>10/2021</InfoText>
+            </CustomerInfo>
+          </CustomerBox>
         </div>
-        <CustomerBox>
-          <CustomerInfo>
-            <InfoText>****.****.****.1234</InfoText>
-            <InfoText>GISELLE N ROSA</InfoText>
-            <InfoText>10/2021</InfoText>
-          </CustomerInfo>
-        </CustomerBox>
-        <div>
-          <Title>PRODUTOS</Title>
-        </div>
-        <ContentBox>
-          {items.map((item) => {
-            return (
-              <Product>
-                <Img
-                  src={item.product.imageObjects[0].extraLarge}
-                  alt={"Foto máscara de reconstrução L'Oréal"}
-                />
-                <ProductDescription>
-                  <ProductText> {item.product.name} </ProductText>
-                </ProductDescription>
-              </Product>
-            )
-          })}
-        </ContentBox>
-      </div>
-      <div>
-        <ValueToPay />
-      </div>
+        <ProductandValue>
+          <ContentProduct>
+            <Title>PRODUTOS</Title>
+            <ContentBox>
+              {items.map((item) => {
+                return (
+                  <Product>
+                    <Img
+                      src={item.product.imageObjects[0].extraLarge}
+                      alt={"Foto máscara de reconstrução L'Oréal"}
+                    />
+                    <ProductDescription>
+                      <ProductText> {item.product.name} </ProductText>
+                    </ProductDescription>
+                  </Product>
+                )
+              })}
+            </ContentBox>
+          </ContentProduct>
+          <ContentValue>
+            <ValueToPay />
+          </ContentValue>
+        </ProductandValue>
+      </Content>
     </Body>
   )
 }

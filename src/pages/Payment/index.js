@@ -3,7 +3,9 @@ import { useFormik } from 'formik'
 import {
   Product,
   CreditCardBox,
+  Content,
   Title,
+  Form,
   Button,
   LinkButton,
   Input,
@@ -28,72 +30,74 @@ export default function Payment() {
       <div>
         <div>
           <Title>CARTÃO DE CRÉDITO</Title>
+          <CreditCardBox>
+            <Product>
+              <Form onSubmit={formik.handleSubmit}>
+                <Field>
+                  <Label htmlFor="cardNumber">Número do Cartão:</Label>
+                  <Input
+                    id="cardNumber"
+                    name="cardNumber"
+                    type="text"
+                    placeholder="____.____.____.____"
+                    onChange={formik.handleChange}
+                    value={formik.values.handleSubmit}
+                  />
+                </Field>
+                <Field>
+                  <Label htmlFor="cardName">Nome do Titular:</Label>
+                  <Input
+                    id="cardName"
+                    name="cardName"
+                    type="text"
+                    placeholder="Como no cartão"
+                    onChange={formik.handleChange}
+                    value={formik.values.handleSubmit}
+                  />
+                </Field>
+                <InfoCardValidityCvv>
+                  <Field>
+                    <LabelType htmlFor="cardValidity">Validade (mês/ano):</LabelType>
+                    <InputType
+                      id="cardValidity"
+                      name="cardValidity"
+                      type="text"
+                      placeholder="__/____"
+                      onChange={formik.handleChange}
+                      value={formik.values.handleSubmit}
+                    />
+                  </Field>
+                  <Field>
+                    <LabelType htmlFor="cvv">CVV:</LabelType>
+                    <InputType
+                      id="cvv"
+                      name="cvv"
+                      type="number"
+                      placeholder="___"
+                      onChange={formik.handleChange}
+                      value={formik.values.handleSubmit}
+                    />
+                  </Field>
+                </InfoCardValidityCvv>
+              </Form>
+            </Product>
+          </CreditCardBox>
         </div>
-        <CreditCardBox>
-          <Product>
-            <form onSubmit={formik.handleSubmit}>
-              <Field>
-                <Label htmlFor="cardNumber">Número do Cartão:</Label>
-                <Input
-                  id="cardNumber"
-                  name="cardNumber"
-                  type="number"
-                  placeholder="____.____.____.____"
-                  onChange={formik.handleChange}
-                  value={formik.values.handleSubmit}
-                />
-              </Field>
-              <Field>
-                <Label htmlFor="cardName">Nome do Titular:</Label>
-                <Input
-                  id="cardName"
-                  name="cardName"
-                  type="text"
-                  placeholder="Como no cartão"
-                  onChange={formik.handleChange}
-                  value={formik.values.handleSubmit}
-                />
-              </Field>
-              <InfoCardValidityCvv>
-                <Field>
-                  <LabelType htmlFor="cardValidity">Validade (mês/ano):</LabelType>
-                  <InputType
-                    id="cardValidity"
-                    name="cardValidity"
-                    type="number"
-                    placeholder="__/____"
-                    onChange={formik.handleChange}
-                    value={formik.values.handleSubmit}
-                  />
-                </Field>
-                <Field>
-                  <LabelType htmlFor="cvv">CVV:</LabelType>
-                  <InputType
-                    id="cvv"
-                    name="cvv"
-                    type="number"
-                    placeholder="___"
-                    onChange={formik.handleChange}
-                    value={formik.values.handleSubmit}
-                  />
-                </Field>
-              </InfoCardValidityCvv>
-            </form>
-          </Product>
-        </CreditCardBox>
       </div>
     )
   }
   return (
     <div>
       <NavBar />
-      <CreditCard />
-      <div>
-        <ValueToPay />
-      </div>
-      <LinkButton to="/confirmation">
-        <Button> FINALIZAR PEDIDO</Button>
-      </LinkButton>
+      <Content>
+        <CreditCard />
+        <div>
+          <ValueToPay />
+          <LinkButton to="/confirmation">
+            <Button> FINALIZAR PEDIDO</Button>
+          </LinkButton>
+        </div>
+      </Content>
     </div>
   )
 }

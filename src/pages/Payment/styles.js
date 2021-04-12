@@ -5,6 +5,15 @@ export const Title = styled.h4`
   margin: 10px 0 0 20px;
   font-size: 1em;
   color: #9c9c9c;
+  @media (min-width: 768px) {
+    font-size: 1.2em;
+  }
+`
+export const Content = styled.div`
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+  }
 `
 
 export const CreditCardBox = styled.div`
@@ -15,13 +24,28 @@ export const CreditCardBox = styled.div`
   margin: 5px 10px 15px 10px;
   display: grid;
   justify-content: center;
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-grow: 1;
+  }
+`
+export const Form = styled.div`
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
 `
 
 export const Product = styled.div`
-  display: flex;
   border-radius: 3px;
   margin: 10px 5px;
   padding: 5px;
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
 `
 
 export const Field = styled.div`
@@ -34,6 +58,10 @@ export const Label = styled.label`
   font-size: 0.8em;
   margin-left: 10px;
   font-weight: bold;
+  @media (min-width: 1024px) {
+    font-size: 0.9em;
+    margin-top: 20px;
+  }
 `
 
 export const LabelType = styled.label`
@@ -42,6 +70,10 @@ export const LabelType = styled.label`
   background-color: rgb(255, 255, 255);
   font-size: 0.8em;
   font-weight: bold;
+  @media (min-width: 1024px) {
+    font-size: 0.9em;
+    margin-top: 20px;
+  }
 `
 
 export const Input = styled.input`
@@ -74,6 +106,20 @@ export const Input = styled.input`
   :-ms-input-placeholder {
     color: rgb(225, 232, 239);
     padding: 10px;
+  }
+  @media (min-width: 1024px) {
+    ::-webkit-input-placeholder {
+      font-size: 1.2em;
+    }
+    :-moz-placeholder {
+      font-size: 1.2em;
+    }
+    ::-moz-placeholder {
+      font-size: 1.2em;
+    }
+    :-ms-input-placeholder {
+      font-size: 1.2em;
+    }
   }
 `
 
@@ -116,19 +162,13 @@ export const InputType = styled.input`
   }
 `
 
-export const Img = styled.img`
-  margin: 30px 0 0 0;
-  height: 70px;
-`
-
-export const ProductText = styled.p`
-  font-size: 0.9em;
-`
-
 export const ProductValue = styled.h4`
   display: flex;
   justify-content: flex-end;
   margin-right: 10px;
+  @media (min-width: 1024px) {
+    font-size: 1.2em;
+  }
 `
 
 export const Button = styled.button`
@@ -149,6 +189,10 @@ export const Button = styled.button`
   box-shadow: 0 4px 0 rgb(218, 93, 0);
   :hover {
     background-color: rgb(212, 90, 0);
+  }
+  @media (min-width: 1024px) {
+    display: flex;
+    padding: 25px 0px 20px 0px;
   }
 `
 

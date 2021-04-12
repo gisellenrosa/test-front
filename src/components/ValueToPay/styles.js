@@ -6,6 +6,7 @@ export const ValuesBox = styled.div`
   padding: 10px;
   margin: 10px 10px 20px 10px;
 `
+
 export const Value = styled.div`
   display: flex;
   justify-content: space-between;
@@ -16,11 +17,13 @@ export const ValueText = styled.p`
   margin-bottom: 0;
   margin-top: 0;
 `
+
 export const ValueDiscount = styled.p`
   margin-bottom: 0;
   margin-top: 0;
   color: #fe8d3b;
 `
+
 export const ValueTotal = styled.p`
   font-weight: bold;
   margin: 10px 0 0 0;

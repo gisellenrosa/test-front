@@ -41,7 +41,7 @@ b. npm start
 
 - [ ] Responsividade Desktop
 - [ ] Payment page: Validação em cada campo do forms
-- [ ] Payment page: Habilitar o botão de Finalizar Pedido apenas se o form esteja válido;
+- [ ] Payment page: Habilitar o botão de Finalizar Pedido apenas se o form estiver válido;
 - [ ] Confirmation page: Todo o conteúdo a partir dos dados persistidos;
 
 <br>

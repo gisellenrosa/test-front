@@ -1,20 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Body, Header, Nav, MenuLinks, StyledLink } from './styles'
 
 export default function NavBar() {
   return (
-    <div>
-      <ul>
-        <Link exact to="/">
-          <li>SACOLA</li>
-        </Link>
-        <Link to="/payment">
-          <li>PAGAMENTO</li>
-        </Link>
-        <Link to="/confirmation">
-          <li>CONFIRMAÇÃO</li>
-        </Link>
-      </ul>
-    </div>
+    <Body>
+      <Header>
+        <Nav>
+          <StyledLink exact activeClassName="current" to="/">
+            <MenuLinks>SACOLA</MenuLinks>
+          </StyledLink>
+          <StyledLink activeClassName="current" to="/payment">
+            <MenuLinks>PAGAMENTO</MenuLinks>
+          </StyledLink>
+          <StyledLink activeClassName="current" to="/confirmation">
+            <MenuLinks>CONFIRMAÇÃO</MenuLinks>
+          </StyledLink>
+        </Nav>
+      </Header>
+    </Body>
   )
 }

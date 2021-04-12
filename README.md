@@ -11,18 +11,18 @@
   </div>
  
 ### Como rodar o projeto:
-1- clone esse repositório em um editor como o [VsCode](https://code.visualstudio.com/)
+1- clone esse repositório através do terminal, será necessário ter instalado o [NodeJs](https://nodejs.org/en/)
 
 2- rode os comando abaixo:
 
 *Para instalar as dependências do Projeto*:
 ```
-a. npm i or yarn add 
+a. npm install 
 ```
 *Para que o projeto rode no navegador*
 
 ```
-b. npm start or yarn start
+b. npm start
 ```
 3. Após essa ação o LocalHost sera aberto
 

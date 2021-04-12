@@ -17,24 +17,12 @@ import {
 import NavBar from '../../components/NavBar'
 import ValueToPay from '../../components/ValueToPay'
 import BuyConfirmation from '../../images/confirmation.png'
+import useRequestData from '../../hooks/Products'
+import { BASE_URL } from '../../constants/urls'
 
 export default function Confirmation() {
-  const [items, setItems] = useState([])
+  const items = useRequestData(BASE_URL, [])
 
-  useEffect(() => {
-    getItems()
-  }, [])
-
-  const getItems = () => {
-    axios
-      .get('https://www.mocky.io/v2/5b15c4923100004a006f3c07')
-      .then((res) => {
-        setItems(res.data.items)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  }
   return (
     <Body>
       <NavBar />

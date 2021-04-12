@@ -14,24 +14,11 @@ import {
 } from './styles'
 import NavBar from '../../components/NavBar'
 import ValueToPay from '../../components/ValueToPay'
+import useRequestData from '../../hooks/Products'
+import { BASE_URL } from '../../constants/urls'
 
 export default function Cart() {
-  const [items, setItems] = useState([])
-
-  useEffect(() => {
-    getItems()
-  }, [])
-
-  const getItems = () => {
-    axios
-      .get('https://www.mocky.io/v2/5b15c4923100004a006f3c07')
-      .then((res) => {
-        setItems(res.data.items)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  }
+  const items = useRequestData(BASE_URL, [])
 
   return (
     <Body>

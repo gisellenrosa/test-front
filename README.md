@@ -1,41 +1,56 @@
-## Frontend Test
 
-Faça um fork deste repositório e finalizar o teste, submeta um pull request para o repositório que nosso time será notificado.
+### Projeto - Belezanaweb 
+  <div style={display:flex;}>
+    <img src="https://user-images.githubusercontent.com/55036173/114406557-04952580-9b7e-11eb-9814-a1327b44dbe2.png"  width="300" />
+    <img src="https://user-images.githubusercontent.com/55036173/114406634-14ad0500-9b7e-11eb-89e5-a98552af48bd.png"  width="300" />
+    <img src="https://user-images.githubusercontent.com/55036173/114406750-2b535c00-9b7e-11eb-9b8b-b3b8997f88dc.png"  width="300" />
+  </div>
+  <div style={display:flex;}>
+    <img src="https://user-images.githubusercontent.com/55036173/114406856-40c88600-9b7e-11eb-83a9-c4ac445f7bf2.png"  width="300" />
+    <img src="https://user-images.githubusercontent.com/55036173/114406944-5178fc00-9b7e-11eb-9b24-5fc8b31ecd9f.png"  width="300" />
+  </div>
+ 
+### Como rodar o projeto:
+1- clone esse repositório em um editor como o [VsCode](https://code.visualstudio.com/)
 
-O teste consiste em um checkout simples contendo 3 passos (carrinho, pagamento e sucesso) [Veja o Layout](https://projects.invisionapp.com/prototype/font-test-cji0j0khf005c1t0132358e8k)
+2- rode os comando abaixo:
 
-**Faça quando quiser/puder (madrugada, fim de semana, etc)**
+*Para instalar as dependências do Projeto*:
+```
+a. npm i or yarn add 
+```
+*Para que o projeto rode no navegador*
 
-### Requerimentos
+```
+b. npm start or yarn start
+```
+3. Após essa ação o LocalHost sera aberto
 
-- Pixel perfect ([nesse link](https://projects.invisionapp.com/prototype/font-test-cji0j0khf005c1t0132358e8k), você pode inspecionar para ver espaçamentos, fonte, tamanho, etc)
-- A aplicação precisa ser responsiva, utilizando o conceito de mobile-first. Use sua imaginação para entregar uma experiência boa no desktop.
-- Renderize cada passo em uma URL única (lib de rotas).
+
+### Funcionalidades Prontas
+
+- [X] Renderizar cada passo em uma URL única (lib de rotas).
+- [X] Utilizar o conceito de mobile-first
+- [X] Cart page:  Consumir o [esse endpoint](http://www.mocky.io/v2/5b15c4923100004a006f3c07) e liste os itens do carrinho, bem como o resumo do carrinho;
+- [X] Cart page: Persistir o conteúdo do JSON para ser usado nas próximas etapas;
+- [X] Payment page: Exiba um form com campos de cartão de crédito
+
+<br>
+
+### Funcionalidades Pendentes
+
+- [ ] Responsividade Desktop
+- [ ] Payment page: Validação em cada campo do forms
+- [ ] Payment page: Habilitar o botão de Finalizar Pedido apenas se o form esteja válido;
+- [ ] Confirmation page: Todo o conteúdo a partir dos dados persistidos;
+
+<br>
+
+### Bibliotecas usadas:
+- react router dom  - *Criar de rotas*
+- axios - *Pegar dados da API*
+- styled-components -  *Estilizar*
+- Formik (useFormik - Hook)
 
 
-### Passo 1 - Carrinho:
-  - Consuma o [esse endpoint](http://www.mocky.io/v2/5b15c4923100004a006f3c07) e liste os itens do carrinho, bem como o resumo do carrinho;
-  - Persista o conteúdo do JSON para ser usado nas próximas etapas;
-
-### Passo 2 - Pagamento: 
-  - Exiba um form com campos de cartão de crédito com validação em cada campo;
-  - Habilite o botão de Finalizar Pedido apenas se o form esteja válido;
-
-### Passo 3 - Sucesso: 
-  - Todo o conteúdo deverá ser exibido a partir dos dados persistidos;
-  
-### O que vamos avaliar:
-  - Organização do código;
-  - Mensagens (em inglês) e mudanças nos commits;
-  - Composição/reutilização de componentes;
-  - Testes unitários;
-  - O motivo de ter escolhido cada tech da stack;
-  - Como rodar sua aplicação ;)
-
-### Diferenciais:
-  - Split bundle por rota (cada step ter um bundle separado para otimizar a performance);
-  - CSS in JS;
-  - React;
-
-### Fim:
-Ao finalizar o teste, submeta um pull request para o repositório que nosso time será notificado. Se tiver alguma observação, escreva no pull request.
+Feito com 💙 by [Giselle Rosa](https://github.com/gisellenrosa)

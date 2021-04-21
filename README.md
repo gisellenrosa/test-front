@@ -17,12 +17,12 @@
 
 *Para instalar as dependências do Projeto*:
 ```
-a. npm install 
+ npm install ou yarn add
 ```
 *Para que o projeto rode no navegador*
 
 ```
-b. npm start
+ npm run start ou yarn start
 ```
 3. Após essa ação o LocalHost sera aberto
 

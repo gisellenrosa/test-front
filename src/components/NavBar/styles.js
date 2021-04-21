@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
 export const Body = styled.div`
-  background-color: #eeeeee;
   @media (min-width: 1024px) {
     margin-bottom: 50px;
   }
@@ -12,11 +11,11 @@ export const StyledLink = styled(NavLink)`
   text-decoration: none;
   color: #d6d6d6;
   display: flex;
-  flex-grow: 1;
-  padding-left: 10px;
   cursor: pointer;
-  text-align: color-interpolation-filters;
-
+  ${(props) =>
+    props.disabled &&
+    `
+  cursor: default;`}
   &.${(props) => props.activeClassName} {
     color: #fe8d3b;
   }
@@ -31,34 +30,25 @@ export const StyledLink = styled(NavLink)`
 
 export const Header = styled.div`
   display: flex;
-  flex: 1;
   justify-content: center;
   align-content: center;
   background-color: white;
-  width: 100vw;
   box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.4);
 `
 
-export const Nav = styled.ul`
+export const Nav = styled.div`
   display: flex;
-  justify-content: center;
-  align-content: center;
-  width: 100vw;
+  width: 100%;
+  justify-content: space-around;
   padding: 2px 10px;
 `
 
-export const MenuLinks = styled.li`
+export const MenuLinks = styled.p`
   font-weight: bold;
   font-size: 0.9em;
   list-style: none;
   margin-left: 8px;
-  @media (min-width: 768px) {
-    margin-left: 60px;
-  }
-  @media (min-width: 1024px) {
-    margin-left: 100px;
-  }
-  @media (min-width: 1445px) {
-    margin-left: 200px;
-  }
+`
+export const Confirmation = styled.div`
+  color: #fe8d3b;
 `

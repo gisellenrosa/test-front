@@ -2,6 +2,9 @@ import React from 'react'
 import { Body, Header, Nav, MenuLinks, StyledLink } from './styles'
 
 export default function NavBar() {
+  const handleClick = (e) => {
+    e.preventDefault()
+  }
   return (
     <Body>
       <Header>
@@ -12,7 +15,12 @@ export default function NavBar() {
           <StyledLink activeClassName="current" to="/payment">
             <MenuLinks>PAGAMENTO</MenuLinks>
           </StyledLink>
-          <StyledLink activeClassName="current" to="/confirmation">
+          <StyledLink
+            activeClassName="current"
+            disabled={true}
+            onClick={handleClick}
+            to="/confirmation"
+          >
             <MenuLinks>CONFIRMAÇÃO</MenuLinks>
           </StyledLink>
         </Nav>

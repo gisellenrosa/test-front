@@ -23,9 +23,18 @@ import ValueToPay from '../../components/ValueToPay'
 import BuyConfirmation from '../../images/confirmation.png'
 import useRequestData from '../../hooks/Products'
 import { BASE_URL } from '../../constants/urls'
+import { useHistory } from 'react-router-dom'
 
-export default function Confirmation() {
+export default function Confirmation(props) {
+  const history = useHistory('')
   const items = useRequestData(BASE_URL, [])
+
+  useEffect(() => {
+    if (!props.location.state) {
+      alert('Necessário preencher dados do cartão!')
+      history.push('./payment')
+    }
+  }, [])
 
   return (
     <Body>
@@ -38,9 +47,9 @@ export default function Confirmation() {
           <Title>PAGAMENTO</Title>
           <CustomerBox>
             <CustomerInfo>
-              <InfoText>****.****.****.1234</InfoText>
-              <InfoText>GISELLE N ROSA</InfoText>
-              <InfoText>10/2021</InfoText>
+              <InfoText>{props.location.state && props.location.state.cardNumber}</InfoText>
+              <InfoText>{props.location.state && props.location.state.cardName}</InfoText>
+              <InfoText>{props.location.state && props.location.state.cardValidity}</InfoText>
             </CustomerInfo>
           </CustomerBox>
         </div>

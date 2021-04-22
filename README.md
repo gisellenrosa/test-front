@@ -1,7 +1,7 @@
 
 ## Projeto - Belezanaweb 
 
-link surge: eighborly-quartz.surge.sh
+[Surge](https://eighborly-quartz.surge.sh)
   <div style={display:flex;}>
     <img src="https://user-images.githubusercontent.com/55036173/114406557-04952580-9b7e-11eb-9814-a1327b44dbe2.png"  width="300" />
     <img src="https://user-images.githubusercontent.com/55036173/114406634-14ad0500-9b7e-11eb-89e5-a98552af48bd.png"  width="300" />

@@ -10,7 +10,7 @@ export default function ValueToPay() {
   }, [])
   const getCount = () => {
     axios
-      .get('http://www.mocky.io/v2/5b15c4923100004a006f3c07')
+      .get('https://www.mocky.io/v2/5b15c4923100004a006f3c07')
       .then((res) => {
         setCount(res.data)
       })

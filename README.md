@@ -1,5 +1,7 @@
 
 ## Projeto - Belezanaweb 
+
+[Surge](https://neighborly-quartz.surge.sh)
   <div style={display:flex;}>
     <img src="https://user-images.githubusercontent.com/55036173/114406557-04952580-9b7e-11eb-9814-a1327b44dbe2.png"  width="300" />
     <img src="https://user-images.githubusercontent.com/55036173/114406634-14ad0500-9b7e-11eb-89e5-a98552af48bd.png"  width="300" />
@@ -34,15 +36,10 @@
 - [X] Cart page:  Consumir o [esse endpoint](http://www.mocky.io/v2/5b15c4923100004a006f3c07) e liste os itens do carrinho, bem como o resumo do carrinho;
 - [X] Cart page: Persistir o conteúdo do JSON para ser usado nas próximas etapas;
 - [X] Payment page: Exiba um form com campos de cartão de crédito
-
-<br>
-
-### Funcionalidades Pendentes
-
-- [ ] Responsividade Desktop
-- [ ] Payment page: Validação em cada campo do forms
-- [ ] Payment page: Habilitar o botão de Finalizar Pedido apenas se o form estiver válido;
-- [ ] Confirmation page: Todo o conteúdo a partir dos dados persistidos;
+- [X] Responsividade Desktop
+- [X] Payment page: Validação em cada campo do forms
+- [X] Payment page: Habilitar o botão de Finalizar Pedido apenas se o form estiver válido;
+- [X] Confirmation page: Todo o conteúdo a partir dos dados persistidos;
 
 <br>
 

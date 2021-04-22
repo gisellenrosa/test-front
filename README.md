@@ -34,15 +34,10 @@
 - [X] Cart page:  Consumir o [esse endpoint](http://www.mocky.io/v2/5b15c4923100004a006f3c07) e liste os itens do carrinho, bem como o resumo do carrinho;
 - [X] Cart page: Persistir o conteúdo do JSON para ser usado nas próximas etapas;
 - [X] Payment page: Exiba um form com campos de cartão de crédito
-
-<br>
-
-### Funcionalidades Pendentes
-
-- [ ] Responsividade Desktop
-- [ ] Payment page: Validação em cada campo do forms
-- [ ] Payment page: Habilitar o botão de Finalizar Pedido apenas se o form estiver válido;
-- [ ] Confirmation page: Todo o conteúdo a partir dos dados persistidos;
+- [X] Responsividade Desktop
+- [X] Payment page: Validação em cada campo do forms
+- [X] Payment page: Habilitar o botão de Finalizar Pedido apenas se o form estiver válido;
+- [X] Confirmation page: Todo o conteúdo a partir dos dados persistidos;
 
 <br>
 

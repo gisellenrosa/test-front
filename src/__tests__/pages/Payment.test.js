@@ -29,8 +29,6 @@ describe('Payment Page ', () => {
     fireEvent.change(cardValidityField, { target: { value: '09/22' } })
     fireEvent.change(cvvField, { target: { value: '123' } })
 
-    // expect(cardNumberField.value).toBe('5555666677778884')
-
     fireEvent.click(ConfirmationButton)
     expect(ConfirmationButton)
   })

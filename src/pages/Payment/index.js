@@ -64,6 +64,7 @@ export default function Payment() {
                   <div>
                     <Label htmlFor="cardNumber">Número do Cartão:</Label>
                     <Input
+                      data-testid="cardNumber"
                       id="cardNumber"
                       name="cardNumber"
                       type="text"
@@ -80,6 +81,7 @@ export default function Payment() {
                   <div>
                     <Label htmlFor="cardName">Nome do Titular:</Label>
                     <Input
+                      data-testid="cardName"
                       id="cardName"
                       name="cardName"
                       type="text"
@@ -97,6 +99,7 @@ export default function Payment() {
                     <div>
                       <Label htmlFor="cardValidity">Validade (mês/ano):</Label>
                       <Input
+                        data-testid="cardValidity"
                         id="cardValidity"
                         name="cardValidity"
                         type="text"
@@ -113,6 +116,7 @@ export default function Payment() {
                     <div>
                       <Label htmlFor="cvv">CVV:</Label>
                       <Input
+                        data-testid="cvv"
                         id="cvv"
                         name="cvv"
                         type="number"

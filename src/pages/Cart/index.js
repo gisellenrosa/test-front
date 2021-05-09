@@ -17,10 +17,11 @@ import NavBar from '../../components/NavBar'
 import ValueToPay from '../../components/ValueToPay'
 import useRequestData from '../../hooks/Products'
 import { BASE_URL } from '../../constants/urls'
+import { useHistory } from 'react-router-dom'
 
 export default function Cart() {
   const items = useRequestData(BASE_URL, [])
-
+  const history = useHistory('')
   return (
     <Body>
       <NavBar />
@@ -38,10 +39,9 @@ export default function Cart() {
                   <ProductDescription>
                     <ProductText> {item.product.name} </ProductText>
                     <ProductValue>
-                      {' '}
-                      R${' '}
+                      R$
                       {item.product.priceSpecification.price &&
-                        item.product.priceSpecification.price.toFixed(2)}{' '}
+                        item.product.priceSpecification.price.toFixed(2)}
                     </ProductValue>
                   </ProductDescription>
                 </Product>
@@ -51,8 +51,8 @@ export default function Cart() {
         </div>
         <div>
           <ValueToPay />
-          <LinkButton to="/payment">
-            <Button> SEGUIR PARA PAGAMENTO</Button>
+          <LinkButton>
+            <Button onClick={() => history.push('/payment')}> SEGUIR PARA PAGAMENTO</Button>
           </LinkButton>
         </div>
       </Content>

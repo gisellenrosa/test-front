@@ -25,13 +25,11 @@ export default function ValueToPay() {
     <div>
       <ValuesBox>
         <Value>
-          {' '}
-          <ValueText> PRODUTOS </ValueText>{' '}
+          <ValueText> PRODUTOS </ValueText>
           <ValueText> R$ {count.subTotal && count.subTotal.toFixed(2)} </ValueText>{' '}
         </Value>
         <Value>
-          {' '}
-          <ValueText> FRETE </ValueText>{' '}
+          <ValueText> FRETE </ValueText>
           <ValueText>R$ {count.shippingTotal && count.shippingTotal.toFixed(2)}</ValueText>
         </Value>
         <Value>
